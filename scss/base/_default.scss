@@ -1,0 +1,210 @@
+body {
+    background: $color-background;
+    color: $color-text;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight-normal;
+    line-height: $line-height;
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $color-heading;
+    line-height: 1.1em;
+    margin: $margin-default 0;
+}
+
+h1 {
+    font-size: 2.2em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+a {
+
+	@include transition(all .25s ease-in-out);
+
+	&:link,
+	&:visited {
+		color: $color-link-default;
+	}
+
+	&:hover,
+	&:active {
+		color: $color-link-hover;
+		text-decoration: underline;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+}
+
+p {
+    margin: $margin-default 0;
+}
+
+b,
+bold,
+strong {
+    font-weight: $font-weight-semibold;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.clearfix {
+	@include clearfix();
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid $color-hr;
+    margin: $margin-default auto;
+	padding: 0;
+}
+
+.responsive-img {
+    @include responsive-img();
+}
+
+.container {
+	margin: 0 auto;
+	max-width: $width-grid;
+	position: relative;
+}
+
+.row {
+
+	@include clearfix();
+
+	.column {
+
+        @include box-sizing(border-box);
+		float: left;
+        padding: 0 $column-gap / 2;
+        position: relative;
+
+		&.col-1 {
+    		@include column(1);
+		}
+
+		&.col-2 {
+    		@include column(2);
+		}
+
+		&.col-3 {
+    		@include column(3);
+		}
+
+		&.col-4 {
+    		@include column(4);
+		}
+
+		&.col-5 {
+    		@include column(5);
+		}
+
+		&.col-6 {
+    		@include column(6);
+		}
+
+		&.col-7 {
+    		@include column(7);
+		}
+
+		&.col-8 {
+    		@include column(8);
+		}
+
+		&.col-9 {
+    		@include column(9);
+		}
+
+		&.col-10 {
+    		@include column(10);
+		}
+
+		&.col-11 {
+    		@include column(11);
+		}
+
+		&.col-12 {
+    		@include column(12);
+		}
+
+        @include breakpoint(xs) {
+    		float: none !important;
+    		width: 100% !important;
+        }
+
+	}
+
+}
+
+.pull-left {
+
+	float: left !important;
+
+	@include breakpoint(xs) {
+		float: none !important;
+	}
+
+}
+
+.pull-right {
+
+	float: right !important;
+
+	@include breakpoint(xs) {
+		float: none !important;
+	}
+
+}
