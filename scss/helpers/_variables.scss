@@ -22,6 +22,24 @@ $color-line: #ececec;
 $margin-default: 30px;
 $padding-default: 30px;
 
+// break points
+$bp-xlg: 1201px;
+$bp-lg: 1200px;
+$bp-md: 1199px;
+$bp-sm: 991px;
+$bp-xs: 767px;
+$bp-xxs: 400px;
+
 // grid
-$width-grid: 1170px;
 $column-gap: 30px;
+$width-grid-rwd: 1170px;
+$width-grid-lg-awd: 1170px;
+$width-grid-md-awd: 900px;
+$width-grid-xs-awd: 700px;
+$width-grid-xxs-awd: 400px;
+
+// resposnive
+$responsive-mode: 'AWD'; // options 'RWD' or 'AWD'
+
+// image path
+$image-path: '../img/';

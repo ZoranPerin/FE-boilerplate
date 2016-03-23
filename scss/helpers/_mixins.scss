@@ -1,6 +1,6 @@
-// @include background-image(logo, png, 200px, 50px, center, no-repeat);
+// @include background-image(logo, png, 100px, 100px, center, no-repeat);
 @mixin background-image($file, $type, $width, $height, $position, $repeat) {
-	background-image: url('../img/' + $file + '.' + $type);
+	background-image: url($image-path + $file + '.' + $type);
 	background-position: $position;
 	background-repeat: $repeat;
 	@media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -10,7 +10,7 @@
 	    only screen and (min-resolution: 192dpi),
 	    only screen and (min-resolution: 2dppx){
 	    & {
-			background-image: url('../img/' + $file + '-2x.' + $type);
+			background-image: url($image-path + $file + '-2x.' + $type);
 			-webkit-background-size: $width $height;
 			-moz-background-size: $width $height;
 			-o-background-size: $width $height;
@@ -36,21 +36,25 @@
 // @include breakpoint(xs) {}
 @mixin breakpoint($class) {
 
-  @if $class == xs {
-    @media (max-width: 767px) { @content; }
-  }
+    @if $class == xxs {
+        @media (max-width: $bp-xxs) { @content; }
+    }
 
-  @else if $class == sm {
-    @media (max-width: 991px) { @content; }
-  }
+    @else if $class == xs {
+        @media (max-width: $bp-xs) { @content; }
+    }
 
-  @else if $class == md {
-    @media (max-width: 1199px) { @content; }
-  }
-  
-  @else if $class == lg {
-    @media (min-width: 1200px) { @content; }
-  }
+    @else if $class == sm {
+        @media (max-width: $bp-sm) { @content; }
+    }
+
+    @else if $class == md {
+        @media (max-width: $bp-md) { @content; }
+    }
+
+    @else if $class == lg {
+        @media (min-width: $bp-lg) { @content; }
+    }
 
 }
 
@@ -117,4 +121,12 @@
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+}
+
+// @include reset-vertical-align;
+@mixin reset-vertical-align {
+    top: auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
 }

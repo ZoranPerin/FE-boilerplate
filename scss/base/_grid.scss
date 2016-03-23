@@ -1,8 +1,36 @@
 .grid-container {
-	margin: 0 auto;
-	max-width: $width-grid;
-	position: relative;
-	width: 100%;
+
+    @if $responsive-mode == 'RWD' {
+
+    	margin: 0 auto;
+    	max-width: $width-grid-rwd;
+    	position: relative;
+    	width: 100%;
+
+    } @else if $responsive-mode == 'AWD' {
+
+    	margin: 0 auto;
+    	position: relative;
+    	width: 100%;
+
+        @include breakpoint(xlg) {
+            max-width: $width-grid-lg-awd;
+        }
+
+        @include breakpoint(lg) {
+            max-width: $width-grid-md-awd;
+        }
+
+        @include breakpoint(md) {
+            max-width: $width-grid-xs-awd;
+        }
+
+        @include breakpoint(xs) {
+            max-width: $width-grid-xxs-awd;
+        }
+
+    }
+
 }
 
 .row {
@@ -56,22 +84,22 @@
 	.col-12 {
 		@include column(12);
 	}
-	
+
 	[class*='col-'] {
-		
+
 		@include box-sizing(border-box);
 		@include clearfix();
 		float: left;
-		min-height: 1px; 
-		padding: 0 $column-gap / 2; 
-		
+		min-height: 1px;
+		padding: 0 $column-gap / 2;
+
         @include breakpoint(xs) {
     		float: none !important;
     		width: 100% !important;
         }
-		
+
     }
-    
+
     .row {
 	    margin-left: -$margin-default/2;
 	    margin-right: -$margin-default/2;
