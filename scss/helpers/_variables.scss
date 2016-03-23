@@ -22,24 +22,21 @@ $color-line: #ececec;
 $margin-default: 30px;
 $padding-default: 30px;
 
+// resposnive
+$responsive-mode: 'RWD'; // options 'RWD' or 'AWD'
+
 // break points
-$bp-xlg: 1201px;
-$bp-lg: 1200px;
-$bp-md: 1199px;
-$bp-sm: 991px;
-$bp-xs: 767px;
-$bp-xxs: 400px;
+$bp-lg: 1170px;
+$bp-md: 960px;
+$bp-sm: 768px;
 
 // grid
 $column-gap: 30px;
 $width-grid-rwd: 1170px;
 $width-grid-lg-awd: 1170px;
-$width-grid-md-awd: 900px;
-$width-grid-xs-awd: 700px;
-$width-grid-xxs-awd: 400px;
-
-// resposnive
-$responsive-mode: 'AWD'; // options 'RWD' or 'AWD'
+$width-grid-md-awd: 930px;
+$width-grid-sm-awd: 738px;
+$width-grid-xs-awd: 480px;
 
 // image path
 $image-path: '../img/';

@@ -13,20 +13,20 @@
     	position: relative;
     	width: 100%;
 
-        @include breakpoint(xlg) {
+        @include breakpoint(lg) {
             max-width: $width-grid-lg-awd;
         }
 
-        @include breakpoint(lg) {
+        @include breakpoint(md) {
             max-width: $width-grid-md-awd;
         }
 
-        @include breakpoint(md) {
-            max-width: $width-grid-xs-awd;
+        @include breakpoint(sm) {
+            max-width: $width-grid-sm-awd;
         }
 
         @include breakpoint(xs) {
-            max-width: $width-grid-xxs-awd;
+            max-width: $width-grid-xs-awd;
         }
 
     }
