@@ -78,16 +78,14 @@
 	width: (100/12) * $value + 0%;
 }
 
-// @include linearGradient(#cccccc, #666666);
-@mixin linearGradient($top, $bottom){
-    background: $top;
-    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom));
-    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%);
-    background: -o-linear-gradient(top,  $top 0%,$bottom 100%);
-    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%);
-    background: linear-gradient(to bottom,  $top 0%,$bottom 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+// @include linearGradient(left, right, start-percent, end-percent, #cccccc, #666666);
+@mixin linearGradient($start, $end, $start-percent, $end-percent, $color1, $colo2){
+    background: $color1;
+    background: -moz-linear-gradient($start, $color1 $start-percent, $colo2 $end-percent);
+    background: -webkit-linear-gradient($start, $color1 $start-percent, $colo2 $end-percent);
+    background: -o-linear-gradient($start, $color1 $start-percent, $colo2 $end-percent);
+    background: -ms-linear-gradient($start, $color1 $start-percent, $colo2 $end-percent);
+    background: linear-gradient(to $end, $color1 $start-percent, $colo2 $end-percent);
 }
 
 // @include list-reset;
