@@ -114,3 +114,23 @@ hr {
 .responsive-img {
     @include responsive-img();
 }
+
+.mobile-hide {
+
+    display: block;
+
+    @include breakpoint(xs) {
+        display: none !important;
+    }
+
+}
+
+.mobile-show {
+
+    display: none;
+
+    @include breakpoint(xs) {
+        display: block;
+    }
+
+}
