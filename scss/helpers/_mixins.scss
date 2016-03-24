@@ -33,6 +33,13 @@
 	box-sizing: $box-model;
 }
 
+// @include box-shadow(10px, 10px, 5px, 0px, #000);
+@mixin box-shadow($x, $y, $b, $s, $color ) {
+    -webkit-box-shadow: $x $y $b $s $color;
+    -moz-box-shadow: $x $y $b $s $color;
+    box-shadow: $x $y $b $s $color;
+}
+
 // @include breakpoint(xs) {}
 @mixin breakpoint($class) {
 
@@ -71,6 +78,18 @@
 	width: (100/12) * $value + 0%;
 }
 
+// @include linearGradient(#cccccc, #666666);
+@mixin linearGradient($top, $bottom){
+    background: $top;
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom));
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%);
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%);
+    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%);
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+}
+
 // @include list-reset;
 @mixin list-reset {
 	list-style: none;
@@ -82,7 +101,6 @@
 @mixin opacity($value) {
     $IEValue: $value * 100;
     opacity: $value;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
     filter: alpha(opacity=$IEValue);
 }
 
@@ -92,6 +110,15 @@
     height: auto;
     max-width: 100%;
     min-width: 100%;
+}
+
+// @include text-elipsis;
+@mixin ellipsis ($width){
+    display: inline-block;
+    max-width: $width;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 // @include text-truncate;
