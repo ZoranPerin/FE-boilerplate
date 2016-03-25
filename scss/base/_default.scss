@@ -86,6 +86,10 @@ strong {
 	text-align: center;
 }
 
+.text-justify {
+	text-align: justify;
+}
+
 .float-left {
 	float: left;
 }
@@ -94,21 +98,16 @@ strong {
 	float: right;
 }
 
+.float-none {
+	float: none;
+}
+
 .clear {
     clear: both;
 }
 
 .clearfix {
 	@include clearfix();
-}
-
-hr {
-	display: block;
-	height: 1px;
-	border: 0;
-	border-top: 1px solid $color-hr;
-    margin: $margin-default auto;
-	padding: 0;
 }
 
 .responsive-img {
@@ -133,4 +132,13 @@ hr {
         display: block;
     }
 
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid $color-hr;
+    margin: $margin-default auto;
+	padding: 0;
 }
