@@ -118,7 +118,7 @@ strong {
 
     display: block;
 
-    @include breakpoint(xs) {
+    @include breakpoint(tablet) {
         display: none !important;
     }
 
@@ -128,7 +128,7 @@ strong {
 
     display: none;
 
-    @include breakpoint(xs) {
+    @include breakpoint(tablet) {
         display: block;
     }
 

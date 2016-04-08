@@ -43,20 +43,29 @@
 // @include breakpoint(xs) {}
 @mixin breakpoint($class) {
 
-    @if $class == xs {
-        @media (max-width: $bp-sm - 1) { @content; }
+    @if $class == phone {
+        @media (max-width: $phone) { @content; }
     }
 
-    @else if $class == sm {
-        @media screen and (min-width: $bp-sm) and (max-width: $bp-md) { @content; }
+    @else if $class == phablet {
+        @media (max-width: $phablet) { @content; }
     }
 
-    @else if $class == md {
-        @media screen and (min-width: $bp-md) and (max-width: $bp-lg) { @content; }
+    @else if $class == tablet {
+        @media (max-width: $tablet) { @content; }
     }
 
-    @else if $class == lg {
-        @media (min-width: $bp-lg) { @content; }
+    @else if $class == tablet-landscape {
+        @media (max-width: $tablet-landscape) { @content; }
+    }
+
+    @else if $class == desktop {
+        @media (max-width: $desktop) { @content; }
+
+    }
+
+    @else if $class == xl-desktop {
+        @media (min-width: $desktop + 1) { @content; }
     }
 
 }

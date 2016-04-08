@@ -23,20 +23,18 @@ $margin-default: 30px;
 $padding-default: 30px;
 
 // resposnive
-$responsive-mode: 'RWD'; // options 'RWD' or 'AWD'
+$responsive-mode: 'fluid-fixed'; // options: 'fluid' or 'fluid-fixed'
 
 // break points
-$bp-lg: 1170px;
-$bp-md: 960px;
-$bp-sm: 768px;
+$phone: 360px;
+$phablet: 480px;
+$tablet: 768px;
+$tablet-landscape: 1024px;
+$desktop: 1200px;
 
 // grid
 $column-gap: 30px;
-$width-grid-rwd: 1170px;
-$width-grid-lg-awd: 1170px;
-$width-grid-md-awd: 930px;
-$width-grid-sm-awd: 738px;
-$width-grid-xs-awd: 480px;
+$width-grid: 1170px;
 
 // image path
 $image-path: '../img/';
