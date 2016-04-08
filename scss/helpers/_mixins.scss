@@ -78,6 +78,15 @@
 	width: (100/12) * $value + 0%;
 }
 
+// @include flex;
+@mixin flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
 // @include linearGradient(left, right, start-percent, end-percent, #cccccc, #666666);
 @mixin linearGradient($start, $end, $start-percent, $end-percent, $color1, $color2) {
 
