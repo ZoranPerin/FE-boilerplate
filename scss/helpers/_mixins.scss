@@ -40,7 +40,7 @@
     box-shadow: $x $y $b $s $color;
 }
 
-// @include breakpoint(xs) {}
+// @include breakpoint(phone) {}
 @mixin breakpoint($class) {
 
     @if $class == phone {
