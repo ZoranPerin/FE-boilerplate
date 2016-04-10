@@ -14,7 +14,7 @@
     	position: relative;
 
         @include breakpoint(desktop) {
-           max-width: $tablet-landscape;
+           max-width: $width-grid;
         }
 
         @include breakpoint(tablet-landscape) {
