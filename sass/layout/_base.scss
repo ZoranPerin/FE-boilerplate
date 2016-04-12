@@ -15,6 +15,7 @@ h4,
 h5,
 h6 {
     color: $color-heading;
+    font-weight: $font-weight-bold;
     line-height: 1.1em;
     margin: $margin-default 0;
 }
@@ -45,7 +46,7 @@ h6 {
 
 a {
 
-	@include transition(all .25s ease-in-out);
+	@include transition(all .3s ease);
 
 	&:link,
 	&:visited {
@@ -71,7 +72,7 @@ p {
 b,
 bold,
 strong {
-    font-weight: $font-weight-semibold;
+    font-weight: $font-weight-bold;
 }
 
 .text-left {
