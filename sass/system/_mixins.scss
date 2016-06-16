@@ -26,11 +26,11 @@
 	box-sizing: $box-model;
 }
 
-// @include box-shadow(10px, 10px, 5px, 0px, #000);
-@mixin box-shadow($x, $y, $b, $s, $color ) {
-    -webkit-box-shadow: $x $y $b $s $color;
-    -moz-box-shadow: $x $y $b $s $color;
-    box-shadow: $x $y $b $s $color;
+// @include box-shadow(10px, 10px, 5px, 0px, #000, inset);
+@mixin box-shadow($x, $y, $b, $s, $color, $inset: null ) {
+   -webkit-box-shadow: $inset $x $y $b $s $color;
+   -moz-box-shadow: $inset $x $y $b $s $color;
+   box-shadow: $inset $x $y $b $s $color;
 }
 
 // @include breakpoint(phone) {}
