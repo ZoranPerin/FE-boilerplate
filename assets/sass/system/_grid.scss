@@ -48,7 +48,15 @@
 		}
 
 	    .column-offset-#{$i} {
+
 		    @include column-offset($i);
+
+		    @include column-offset($i);
+
+	        @include breakpoint(tablet) {
+	            margin-left: 0;
+	        }
+
 	    }
 
 	}
