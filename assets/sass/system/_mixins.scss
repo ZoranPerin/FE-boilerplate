@@ -1,10 +1,10 @@
-// @include background-image(logo, png, 100px, 100px, center, no-repeat, true);
-@mixin background-image($file, $type, $width, $height, $position, $repeat, $retina: true) {
+// @include background-image(logo, png, 100px 100px, center, no-repeat, true);
+@mixin background-image($file, $type, $size, $position, $repeat, $retina: true) {
 
     background-image: url($image-path + $file + '.' + $type);
     background-position: $position;
     background-repeat: $repeat;
-    background-size: $width $height;
+    background-size: $size;
 
     @if ($retina == true) {
 
