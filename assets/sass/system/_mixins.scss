@@ -78,7 +78,12 @@
 
 // @include column(2);
 @mixin column($value) {
-	width: (100/12) * $value + 0%;
+	width: (100/$column-number) * $value + 0%;
+}
+
+// @include column-offset(2);
+@mixin column-offset($value) {
+	margin-left: (100/$column-number) * $value + 0%;
 }
 
 // @include flex;
