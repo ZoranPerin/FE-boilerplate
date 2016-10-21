@@ -76,6 +76,14 @@
 
     }
 
+	[class*='column-offset-'] {
+
+        @include breakpoint(tablet) {
+    		margin-left: 0;
+        }
+
+    }
+
     .row {
 	    margin-left: -$margin-default/2;
 	    margin-right: -$margin-default/2;
