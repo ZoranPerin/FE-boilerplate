@@ -73,7 +73,7 @@ small {
 	font-size: 80%;
 }
 
-sub,sup {
+sub, sup {
 	font-size: 75%;
 	line-height: 0;
 	position: relative;
@@ -102,7 +102,7 @@ code, kbd, pre, samp {
 }
 
 figure {
-	margin:1em 40px;
+	margin: 1em 40px;
 }
 
 hr {
@@ -132,7 +132,8 @@ button, select {
 	text-transform: none;
 }
 
-button,[type="button"],
+button,
+[type="button"],
 [type="reset"],
 [type="submit"] {
 	cursor: pointer;
@@ -150,8 +151,14 @@ html [type="button"],
 }
 
 input {
+
     -moz-appearance: none;
     -webkit-appearance: none;
+
+    &:focus {
+	    outline: none;
+    }
+
 }
 
 button::-moz-focus-inner,

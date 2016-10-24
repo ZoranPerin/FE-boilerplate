@@ -14,7 +14,7 @@
     	position: relative;
 
         @include breakpoint(desktop) {
-           max-width: $width-grid;
+           max-width: $tablet-landscape;
         }
 
         @include breakpoint(tablet-landscape) {
@@ -72,6 +72,14 @@
         @include breakpoint(tablet) {
     		float: none !important;
     		width: 100% !important;
+        }
+
+    }
+
+	[class*='column-offset-'] {
+
+        @include breakpoint(tablet) {
+    		margin-left: 0;
         }
 
     }
