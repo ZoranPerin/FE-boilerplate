@@ -1,0 +1,32 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "This is a simple FrontEnd boilerplate, it can speed you workflow or make your life a living hell so be carefull :)",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anagramik/FE-boilerplate.git"
+  },
+  "author": "https://github.com/anagramik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anagramik/FE-boilerplate/issues"
+  },
+  "homepage": "https://github.com/anagramik/FE-boilerplate#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.5.1",
+    "browser-sync": "^2.17.5",
+    "cssnano": "^3.8.0",
+    "gulp": "^3.9.1",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-postcss": "^6.2.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-uglify": "^2.0.0",
+    "postcss": "^5.2.5"
+  }
+}

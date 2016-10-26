@@ -1,7 +1,7 @@
 .navigation {
-
+    background: red;
     &-list {
-
+        background: purple;
 		@include clearfix;
 		@include list-reset;
 
