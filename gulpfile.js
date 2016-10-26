@@ -65,6 +65,4 @@ gulp.task('watch', ['browserSync'], function () {
     gulp.watch('./**/*.html', ['templates']);
 });
 
-gulp.task('minifyassets', ['scripts']);
-
-//gulp.task('default', ['scss']);
+gulp.task('default', ['scripts', 'sass']);
