@@ -168,6 +168,15 @@
     white-space: nowrap;
 }
 
+// @include transform(scale(1,1));
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
+}
+
 // @include transition(all .2s linear);
 @mixin transition($args) {
     -webkit-transition: $args;
