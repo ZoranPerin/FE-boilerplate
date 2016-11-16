@@ -20,12 +20,6 @@ $(document).ready(function() {
 
 	detectSize();
 
-	// form validation
-	$.validate({
-		form : '.form-validate',
-		scrollToTopOnError : false
-	});
-
 	// retina images
 	if (window.devicePixelRatio > 1) {
 
