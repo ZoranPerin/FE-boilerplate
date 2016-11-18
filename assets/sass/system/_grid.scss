@@ -47,7 +47,11 @@
 			@include column($i);
 		}
 
-	    .column-offset-#{$i} {
+	}
+
+	@for $i from 1 through $column-number {
+
+	    .offset-#{$i} {
 
 		    @include column-offset($i);
 
@@ -68,13 +72,13 @@
 		padding: 0 $column-gap/2;
 
         @include breakpoint(tablet) {
-    		float: none !important;
-    		width: 100% !important;
+    		float: none;
+    		width: 100%;
         }
 
     }
 
-	[class*='column-offset-'] {
+	[class*='offset-'] {
 
         @include breakpoint(tablet) {
     		margin-left: 0;
@@ -83,9 +87,9 @@
     }
 
     .row {
-	    margin-left: -$column-gap/2;
-	    margin-right: -$column-gap/2;
-	    position: relative;
+        margin-left: -$column-gap/2;
+        margin-right: -$column-gap/2;
+        position: relative;
     }
 
 }
