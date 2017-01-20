@@ -1,0 +1,59 @@
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-justify {
+	text-align: justify;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.float-none {
+	float: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.clearfix {
+	@include clearfix();
+}
+
+.responsive-img {
+    @include responsive-img();
+}
+
+.mobile-hide {
+
+    display: block;
+
+    @include breakpoint(tablet) {
+        display: none !important;
+    }
+
+}
+
+.mobile-show {
+
+    display: none;
+
+    @include breakpoint(tablet) {
+        display: block;
+    }
+
+}
