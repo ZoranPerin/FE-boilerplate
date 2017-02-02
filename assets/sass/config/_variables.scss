@@ -31,10 +31,10 @@ $padding-default: 30px;
 $responsive-mode: 'fluid-fixed'; // options: 'fluid' or 'fluid-fixed'
 
 // break points
-$xs: 575px;
-$sm: 767px;
-$md: 991px;
-$lg: 1199px;
+$phone: 575px;
+$phablet: 767px;
+$tablet: 991px;
+$desktop: 1199px;
 
 // grid
 $column-number: 12;
