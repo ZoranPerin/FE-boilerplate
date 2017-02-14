@@ -125,6 +125,22 @@
     filter: alpha(opacity=$IEValue);
 }
 
+// @include input-placeholder(#fff);
+@mixin input-placeholder($value) {
+	::-webkit-input-placeholder {
+	   color: $value;
+	}
+	:-moz-placeholder {
+	   color: $value;
+	}
+	::-moz-placeholder {
+	   color: $value;
+	}
+	:-ms-input-placeholder {
+	   color: $value;
+	}
+}
+
 // @include position-absolute($top: 10px, $left: 10px);
 @mixin position-absolute($top: null, $right: null, $bottom: null, $left: null) {
     bottom: $bottom;
