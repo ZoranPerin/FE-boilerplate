@@ -2,7 +2,7 @@
 @import "system/mixins";
 @import "config/typography";
 
-@import "system/reset";
+@import "system/normalize";
 @import "system/grid";
 
 @import "layout/base";
@@ -16,5 +16,3 @@
 
 @import "components/button";
 @import "components/form";
-
-//@import "system/animate";
