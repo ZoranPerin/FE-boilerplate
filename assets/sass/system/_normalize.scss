@@ -1,3 +1,7 @@
+*, *:before, *:after {
+	@include box-sizing(border-box);
+}
+
 html {
 	font-family: sans-serif;
     text-rendering: optimizeLegibility;
