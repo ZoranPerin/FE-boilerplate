@@ -18,7 +18,6 @@
 @mixin border-radius($value) {
 	-webkit-border-radius: $value;
 	border-radius: $value;
-	background-clip: padding-box;
 }
 
 // @include box-sizing(border-box);
